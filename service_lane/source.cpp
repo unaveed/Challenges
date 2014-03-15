@@ -31,7 +31,7 @@ int main(){
 		// Second run, initialize the array
 		else if(counter == 2){
 			for(int i = 0; i < arr_size*2; i+=2)
-				widths[i] = input[i] - '0';
+				widths[i / 2] = input[i] - '0';
 		}
 		// Add each test case to the cases vector
 		else {
