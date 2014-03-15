@@ -44,14 +44,20 @@ int main(){
 		counter++;
 	}
 
+	for(int i = 0; i < loops; i++){	
+		string x = cases.at(0);
+		int index_ent = x[0]- '0';
+		int index_ext = x[2] - '0';
+		
+		cout << index_ent << endl;
+		cout << index_ext << endl;
+		cout << widths[index_ent] << endl;
+		cout << widths[index_ext] << endl;
+
+		//int temp = getVehicle(widths[index_ent], widths[index_ext]);
+	}
+	delete []widths;
 	cout << "Reached end" << endl;
-	
-	string x = cases.at(0);
-	int index_ent = x[0]- 'a';
-	int index_ext = x[2] - 'a';
-
-	getVehicle(widths[index_ent], widths[index_ext]);
-
 	return 0;
 }
 
