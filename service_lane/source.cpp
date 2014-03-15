@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+int getVehicle(int, int);
+
 int main(){
 	// Holds input stream	
 	string input;
@@ -43,5 +45,21 @@ int main(){
 	}
 
 	cout << "Reached end" << endl;
+	
+	string x = cases.at(0);
+	int index_ent = x[0]- 'a';
+	int index_ext = x[2] - 'a';
+
+	getVehicle(widths[index_ent], widths[index_ext]);
+
 	return 0;
+}
+
+int getVehicle(int enter, int exit){
+	if(enter == 1)
+		return 1;
+	if(exit < enter)
+		return exit;
+	else
+		return enter;
 }
